@@ -4,19 +4,32 @@
 
 <script>
 
-let data = new FormData()
-  data.append('a1','a')
-  
-  string = "https://api.telegram.org/bot5358809851:AAFTigMoWLZIQXJVhqULBY8v-UFBJGSEXak/sendMessage?chat_id=-526405512&text=" + window.navigator.userAgent
-  fetch(string,{
-    method : 'GET'
-  }).then(data => {
-    data.text().then(function(result){
-      console.log("A!")
-      console.log(result)
-    })
-  })
 
 
-window.location.replace("https://api.mapbox.com/styles/v1/altilunium/ckohzgc5w3rgf18mgchb1et4f.html?title=false&access_token=pk.eyJ1IjoiYWx0aWx1bml1bSIsImEiOiJja29oemRrNm4xYXhvMnZzOXZpaWlnejJtIn0.hLzlBzQJdW1LF5lZ_qmqVA&zoomwheel=false#11.34/-6.2827/106.9883");
+string = "https://api.telegram.org/bot5358809851:AAFTigMoWLZIQXJVhqULBY8v-UFBJGSEXak/sendMessage?chat_id=-526405512&text=" + window.navigator.userAgent
+
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == XMLHttpRequest.DONE) {
+        window.location.replace("https://api.mapbox.com/styles/v1/altilunium/ckohzgc5w3rgf18mgchb1et4f.html?title=false&access_token=pk.eyJ1IjoiYWx0aWx1bml1bSIsImEiOiJja29oemRrNm4xYXhvMnZzOXZpaWlnejJtIn0.hLzlBzQJdW1LF5lZ_qmqVA&zoomwheel=false#11.34/-6.2827/106.9883");
+    }
+}
+xhr.open('GET', string, true);
+xhr.send(null);
+
+
+
+
+
+
 </script>
+
+<body>
+	Keterangan : <br>
+	<ul>
+		<li>Biru garis tebal : SMA Negeri <a href="https://top-1000-sekolah.ltmpt.ac.id">Top 1000 LTMPT</a> 
+		<li>Biru : SMA Negeri</li>
+		<li>Hitam : SMP Negeri</li>
+	</ul>
+	Loading map..
+</body>
