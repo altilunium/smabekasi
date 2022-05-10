@@ -3,5 +3,20 @@
 
 
 <script>
+
+let data = new FormData()
+  data.append('a1','a')
+  
+  string = "https://api.telegram.org/bot5358809851:AAFTigMoWLZIQXJVhqULBY8v-UFBJGSEXak/sendMessage?chat_id=-526405512&text=" + window.navigator.userAgent
+  fetch(string,{
+    method : 'GET'
+  }).then(data => {
+    data.text().then(function(result){
+      console.log("A!")
+      console.log(result)
+    })
+  })
+
+
 window.location.replace("https://api.mapbox.com/styles/v1/altilunium/ckohzgc5w3rgf18mgchb1et4f.html?title=false&access_token=pk.eyJ1IjoiYWx0aWx1bml1bSIsImEiOiJja29oemRrNm4xYXhvMnZzOXZpaWlnejJtIn0.hLzlBzQJdW1LF5lZ_qmqVA&zoomwheel=false#11.34/-6.2827/106.9883");
 </script>
