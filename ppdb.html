@@ -1,0 +1,55 @@
+<script src="d3min.js"></script>
+<script src="timeliinemin.js"></script>
+
+<style>
+	#scale{
+		position: fixed;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+	}
+	.txt{
+		font-size: 14px;
+		font-family: Arial;
+	}
+</style>
+
+
+<div id="scale"></div>
+
+<script>
+li_setup("#scale","1 May 2022","1 Aug 2022")
+var baseb = 620
+var base = baseb
+var gap = 15
+stamp("17 May 2022","Pembagian akun ke sekolah",base)
+base += gap
+stamp("20 May 2022","Pembagian akun ke siswa",base)
+base += gap
+stamp("23 May 2022","Upload dokumen + rapor",base)
+base += gap
+stamp("6 Jun 2022","Pendaftaran gel.1",base)
+base += gap
+stamp("13 Jun 2022","Tes gel1",base)
+base += gap
+stamp("20 Jun 2022","Pengumuman gel.1",base)
+base += gap
+stamp("21 Jun 2022","Daftar ulang gel.1",base)
+base += gap
+stamp("23 Jun 2022","Pendaftaran gel.2",base)
+base = baseb
+stamp("8 Jul 2022","Pengumuman gel.2",base)
+base += gap
+stamp("11 Jul 2022","Daftar ulang gel.2",base)
+base += gap
+stamp("13 Jul 2022","MOS",base)
+base += gap
+stamp("18 Jul 2022","Tahun ajaran baru",base)
+
+
+
+
+stamp("n","Saat ini",800)
+
+
+</script>
